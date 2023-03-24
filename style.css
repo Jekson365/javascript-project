@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.mw-1200 {
+  max-width: 1200px;
+  height: 700px;
+  background-color: white;
+  position: relative;
+  box-shadow: 0 0 40px 0.1px rgba(0, 0, 0, 0.338);
+  border-radius: 10px;
+}
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+.tabs {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+}
+.tabs button {
+  margin: 10px;
+}
+.active {
+  display: block !important;
+}
+.desk {
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  width: 100%;
+  height:90%;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%,-50%);
+  background-color: rgb(238, 238, 238);
+}
+.desk1 {
+  overflow-y: scroll;
+  
+}
