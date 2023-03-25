@@ -5,8 +5,10 @@ var addButton = document.querySelector(".sbuser")
 var errorM = document.querySelector(".error")
 var arr = JSON.parse(localStorage.getItem("data")) || []
 var forbidenVars = ['!','@','#','$','%','^','&','*','(',')']
+errorM.classList.add("d-none")
 
 const handleError = (errorMessage) => {
+    errorM.classList.remove("d-none")
     errorM.innerHTML = errorMessage
 }
 
@@ -19,7 +21,7 @@ const handleSubmit = (e) => {
     var result = {
         name: "",
         surname: "",
-        id: Math.random() * 10000
+        id: Math.floor(Math.random() * 10000000)
     }
 
 
@@ -29,11 +31,14 @@ const handleSubmit = (e) => {
 
 
     // validation 
+    
     if (result.name.length <= 3 || result.surname.length <= 3 ) {
         handleError("name or surname must be longer than 3 characters")
         validate = false
         setTimeout(()=> {
             handleError("")
+            errorM.classList.add("d-none")
+            validate = true
         },2000)
     } 
     forbidenVars.map((char)=> {
@@ -41,6 +46,7 @@ const handleSubmit = (e) => {
             handleError("invalid characters")
             setTimeout(()=> {
                 handleError("")
+                errorM.classList.add("d-none")
             },2000)
             validate = false
         }

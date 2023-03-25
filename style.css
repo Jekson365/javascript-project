@@ -11,41 +11,64 @@
   box-shadow: 0 0 40px 0.1px rgba(0, 0, 0, 0.338);
   border-radius: 10px;
 }
+
 body {
   display: flex;
   align-items: center;
   height: 100vh;
   justify-content: center;
 }
+
 .tabs {
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 5rem;
 }
+
 .tabs button {
   margin: 10px;
 }
+
 .active {
   display: block !important;
 }
+
 .desk {
   display: none;
   position: absolute;
   border-radius: 10px;
   width: 100%;
-  height:90%;
+  height: 90%;
   left: 50%;
   top: 55%;
-  transform: translate(-50%,-50%);
-  background-color: rgb(238, 238, 238);
+  transform: translate(-50%, -50%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(155, 155, 155, 0.146) 0%, rgba(255, 255, 255, 1) 79%);
 }
+
 .desk1 {
+  overflow-x: hidden;
   overflow-y: scroll;
-  
+
 }
+
+.d-none {
+  display: none;
+}
+
+.new {
+  padding: 10px;
+  border-radius: 40px;
+}
+
+.new p {
+  font-weight: bold;
+  margin: 0 !important;
+}
+
 .remove {
   background-color: rgb(231, 74, 74) !important;
   color: white;
@@ -54,15 +77,41 @@ body {
   border-radius: 5px;
   transition: 0.3s;
 }
+
 .remove:hover {
   background-color: transparent !important;
   color: black;
   outline: 0.3px solid rgb(231, 74, 74);
 }
+
 .error {
   background-color: rgb(231, 74, 74);
   color: white;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 30px;
+}
+
+.tr-item {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-bar {
+  width: 100%;
+  display: flex;
+  padding: 10px 20px;
+  justify-content:end;
+  align-items: flex-end;
+  float: right;
+}
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 3px;
+}
+.tr-item:hover {
+  cursor: pointer;
+  background-color: rgb(238, 238, 238);
+  transform: scale(1.02);
 }

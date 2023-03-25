@@ -19,12 +19,17 @@
       <button class="btn tab-btn btn-primary tab" id="3">new users</button>
     </div>
     <div class="desk active desk1" id="1">
+      <div class="search-bar">
+        <input type="text" id="user-search" placeholder="Search...">
+      </div>
       <table class="table">
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">First</th>
             <th scope="col">Last</th>
+            <th scope="col">ID</th>
+            <th scope="col">Action</th>
           </tr>
       </table>
     </div>
@@ -32,7 +37,9 @@
     <div class="desk" id="3">
       <div class="w-52 h-100  d-flex flex-column justify-content-center align-items-center">
         <div class="error"></div>
-        <h3 class="h3">New User</h3>
+        <div class="new bg-primary">
+          <p class="p text-white">New user</p>
+        </div>
         <div class="d-flex flex-column align=items-center">
           <div class="form-group mt-4">
             <label for="exampleInputEmail1">User Name</label>
