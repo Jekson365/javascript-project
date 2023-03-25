@@ -21,8 +21,8 @@ const getData = async () => {
         th.setAttribute("scope", "row")
         th.innerHTML = count;
         
-        removeButton.classList.add("btn")
-        removeButton.classList.add("btn-danger")
+        removeButton.classList.add("remove")
+
         removeButton.innerHTML = "remove"
 
         td.innerHTML = name
