@@ -8,8 +8,10 @@ var forbidenVars = ['!','@','#','$','%','^','&','*','(',')']
 errorM.classList.add("d-none")
 
 const handleError = (errorMessage) => {
+
     errorM.classList.remove("d-none")
     errorM.innerHTML = errorMessage
+
 }
 
 var validate = true
@@ -24,15 +26,13 @@ const handleSubmit = (e) => {
         id: Math.floor(Math.random() * 10000000)
     }
 
-
-
     result.name = nameValue.value
     result.surname = surnameValue.value
 
 
     // validation 
     
-    if (result.name.length <= 3 || result.surname.length <= 3 ) {
+    if (result.name.length <= 1 || result.surname.length <= 3 ) {
         handleError("name or surname must be longer than 3 characters")
         validate = false
         setTimeout(()=> {

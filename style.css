@@ -20,14 +20,13 @@ body {
 }
 
 .tabs {
-
+  
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 5rem;
 }
-
 .tabs button {
   margin: 10px;
 }
@@ -43,6 +42,7 @@ body {
   width: 100%;
   height: 90%;
   left: 50%;
+  overflow-y: scroll;
   top: 55%;
   transform: translate(-50%, -50%);
   background: rgb(0, 0, 0);
@@ -96,6 +96,9 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
+th {
+  padding: 10px !important;
+}
 
 .search-bar {
   width: 100%;
@@ -109,6 +112,13 @@ body {
 .search-bar input {
   padding: 10px;
   border-radius: 3px;
+  transition: 0.3s ease-in;
+  outline: 0;
+  border: 1px solid black;
+}
+.search-bar input:focus {
+  border: 1px solid black;
+  border-radius: 30px;
 }
 .tr-item:hover {
   cursor: pointer;

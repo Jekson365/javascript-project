@@ -15,11 +15,11 @@
   <div class="container mw-1200">
     <div class="tabs">
       <button class="btn tab-btn btn-primary tab" id="1">users</button>
-      <button class="btn tab-btn btn-primary tab" id="2">tab 2</button>
+      <button class="btn tab-btn btn-primary tab" id="2">search</button>
       <button class="btn tab-btn btn-primary tab" id="3">new users</button>
+      <button class="btn tab-btn btn-primary tab" id="4">edit</button>
     </div>
     <div class="desk active desk1" id="1">
-
       <table class="table">
         <thead>
           <tr>
@@ -45,6 +45,16 @@
             <th>ID</th>
           </tr>
         </thead>
+
+        <tbody class="table-searched-body"></tbody>
+
+        <!-- <tbody>
+          <tr>
+            <th>1</th>
+            <th>1</th>
+            <th>1</th>
+          </tr>
+        </tbody> -->
       </table>
     </div>
     <div class="desk" id="3">
@@ -69,13 +79,25 @@
         </div>
       </div>
     </div>
+    <div class="desk" id="4">
+      <div class="w-100 h-100 d-flex align-items-center justify-content-center">
+        <form class="forms d-flex flex-column align-items-center">
+          <input type="text" class="form-control mt-3 idval" placeholder="id">
+          <input type="text" class="form-control mt-3 nameval" placeholder="name">
+          <input type="text" class="form-control mt-3 surnameval" placeholder="surname">
+          <div class="btns">
+            <button class="btn btn-primary mt-5 submitChange">Submit change</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
   <script type="module" src="/main.js"></script>
   <script type="module" src="./scripts/Search.js"></script>
   <script type="module" src="./scripts/handleNewUser.js"></script>
   <script type="module" src="./scripts/fetchData.js"></script>
-  <script type="module" src="./scripts/loadData.js"></script>
   <script type="module" src="./scripts/controlSections.js"></script>
+  <script type="module" src="./scripts/edit.js"></script>
 </body>
 
 </html>
