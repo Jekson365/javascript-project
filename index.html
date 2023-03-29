@@ -6,6 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <title>Vite App</title>
@@ -14,12 +15,13 @@
 <body>
   <div class="container mw-1200">
     <div class="tabs">
-      <button class="btn tab-btn btn-primary tab" id="1">users</button>
-      <button class="btn tab-btn btn-primary tab" id="2">search</button>
-      <button class="btn tab-btn btn-primary tab" id="3">new users</button>
-      <button class="btn tab-btn btn-primary tab" id="4">edit</button>
+      <button class="btn tab-btn btn-primary tab" id="1">users <i class="bi bi-person-fill"></i></button>
+      <button class="btn tab-btn btn-primary tab" id="2">search <i class="bi bi-search"></i></button>
+      <button class="btn tab-btn btn-primary tab" id="3">new users <i class="bi bi-person-plus-fill"></i></button>
+      <button class="btn tab-btn btn-primary tab" id="4">edit <i class="bi bi-pen-fill"></i></button>
     </div>
     <div class="desk active desk1" id="1">
+      <h4 class="text-left m-3">Users</h4>
       <table class="table">
         <thead>
           <tr>
@@ -29,11 +31,12 @@
             <th scope="col">ID</th>
             <th scope="col">Action</th>
           </tr>
-      </table>
-    </div>
-    <div class="desk" id="2">
-      <!--Search bar-->
-      <div class="search-bar">
+        </table>
+      </div>
+      <div class="desk" id="2">
+        <!--Search bar-->
+        <div class="search-bar d-flex justify-content-between align-items-center  ">
+        <h4 class="text-l eft m-3">Search</h4>
         <input type="text" id="user-search" placeholder="Search...">
       </div>
       <!--Search bar-->
@@ -45,9 +48,9 @@
             <th>ID</th>
           </tr>
         </thead>
-
+        
         <tbody class="table-searched-body"></tbody>
-
+        
         <!-- <tbody>
           <tr>
             <th>1</th>
@@ -58,6 +61,7 @@
       </table>
     </div>
     <div class="desk" id="3">
+      <h4 class="text-left m-3">Add new users</h4>
       <div class="w-52 h-100  d-flex flex-column justify-content-center align-items-center">
         <div class="error"></div>
         <div class="new bg-primary">
@@ -67,7 +71,7 @@
           <div class="form-group mt-4">
             <label for="exampleInputEmail1">User Name</label>
             <input type="text" class="form-control name" id="exampleInputEmail1" aria-describedby="emailHelp"
-              placeholder="username">
+            placeholder="username">
           </div>
           <div class="form-group mt-4">
             <label for="exampleInputPassword1">Surname</label>
@@ -80,6 +84,7 @@
       </div>
     </div>
     <div class="desk" id="4">
+      <h4 class="text-left m-3">Edit</h4>
       <div class="w-100 h-100 d-flex align-items-center justify-content-center">
         <form class="forms d-flex flex-column align-items-center">
           <input type="text" class="form-control mt-3 idval" placeholder="id">

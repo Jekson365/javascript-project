@@ -22,7 +22,7 @@ userInput.addEventListener("input", () => {
     var filtered = []
     data.filter((each) => {
         const { name, surname, id } = each
-        if (name.includes(userInput.value) || surname.includes(userInput.value)) {
+        if (name.includes(userInput.value) || surname.includes(userInput.value) || String(id).includes(userInput.value)) {
             filtered.push(each)
         }
     })

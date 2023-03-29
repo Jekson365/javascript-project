@@ -9,8 +9,10 @@ submitChange = document.querySelector(".submitChange")
 var pickedData
 var data = JSON.parse(localStorage.getItem("data"))
 
-idval.addEventListener("input",(e)=> {
 
+// change value in input fileds
+idval.addEventListener("input",(e)=> {
+    // find value in data by id
     data.map((each)=> {
         if (each.id == idval.value) {
             pickedData = each
@@ -29,7 +31,7 @@ idval.addEventListener("input",(e)=> {
     }
 })
 
-
+// submit change
 submitChange.addEventListener("click",()=> {
 
     var changedName = nameval.value
@@ -48,7 +50,7 @@ submitChange.addEventListener("click",()=> {
         return item
     })
 
-    console.log(editedData)
+    // save to local storage
     localStorage.setItem("data",JSON.stringify(editedData))
 
 
