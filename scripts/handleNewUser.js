@@ -39,7 +39,7 @@ const handleSubmit = (e) => {
     if (result.name.length <= 1 || result.surname.length <= 3 ) {
         handleError("name or surname must be longer than 3 characters")
         validate = false
-        setTimeout(()=> {
+        setTimeout(()=> {   
             handleError("")
             errorM.classList.add("d-none")
             validate = true
