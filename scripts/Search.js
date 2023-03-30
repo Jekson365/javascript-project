@@ -34,10 +34,11 @@ userInput.addEventListener("input", () => {
 
 // dispaly filteredDat Function
 function displayFilteredData(arr) {
-    searchedText.innerHTML = arr.map(each => 
+    searchedText.innerHTML = arr.map((each) => 
         `<tr>
             <th>${each.name}</th>
             <th>${each.surname}</th>
+            <th>${each.student}</th>
             <th>${each.id}</th>
         </tr>`
     ).join('')

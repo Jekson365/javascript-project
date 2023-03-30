@@ -34,7 +34,12 @@ body {
 .active {
   display: block !important;
 }
-
+.student-true {
+  background-color: green !important;
+}
+.student-false {
+  background-color: red !important;
+}
 .desk {
   display: none;
   position: absolute;

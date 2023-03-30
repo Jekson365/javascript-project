@@ -4,7 +4,9 @@ var surnameValue = document.querySelector(".surname")
 var addButton = document.querySelector(".sbuser")
 var errorM = document.querySelector(".error")
 var arr = JSON.parse(localStorage.getItem("data")) || []
+var student = document.getElementById("student")
 var forbidenVars = ['!','@','#','$','%','^','&','*','(',')']
+
 errorM.classList.add("d-none")
 
 const handleError = (errorMessage) => {
@@ -22,12 +24,14 @@ const handleSubmit = (e) => {
 
     var result = {
         name: "",
+        student:null,
         surname: "",
         id: Math.floor(Math.random() * 10000000)
     }
 
     result.name = nameValue.value
     result.surname = surnameValue.value
+    result.student = student.checked ? true : false
 
 
     // validation 
