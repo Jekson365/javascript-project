@@ -26,4 +26,6 @@ function shuffleArray(array) {
 
 shuffleArray(full)
 
-localStorage.setItem("data", JSON.stringify(full))
+if (!localStorage.getItem("data")) {
+    localStorage.setItem("data", JSON.stringify(full))
+}
