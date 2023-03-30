@@ -1,9 +1,10 @@
-var nameval,surnameval,idval,submitChange
+var nameval,surnameval,idval,submitChange,ifStudent
 
 nameval = document.querySelector(".nameval")
 surnameval = document.querySelector(".surnameval")
 idval = document.querySelector(".idval")
 submitChange = document.querySelector(".submitChange")
+ifStudent = document.getElementById("ifstudent")
 
 
 var pickedData
@@ -16,7 +17,6 @@ idval.addEventListener("input",(e)=> {
     data.map((each)=> {
         if (each.id == idval.value) {
             pickedData = each
-
         }
         else {
             // if id not found!
@@ -37,12 +37,14 @@ submitChange.addEventListener("click",()=> {
     var changedName = nameval.value
     var changedSurname = surnameval.value
     var ID = idval.value
+    var changedStudent = ifStudent.checked ? true : false
 
     var editedData = data.map((item)=> {
         if (item.id == ID) {
             item.name = changedName
             item.surname = changedSurname
             item.id = Number(ID)
+            item.student = changedStudent
         }
         else {
             console.log("no user found")
