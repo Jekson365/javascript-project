@@ -13,12 +13,20 @@
 </head>
 
 <body>
+  <div class="delete-window">
+    <h4 class="h4">Are you sure?</h4>
+    <div class="row">
+      <div class="btn btn-success yes">Yes</div>
+      <div class="btn btn-danger no">No</div>
+    </div>
+  </div>
   <div class="container mw-1200">
     <div class="tabs">
       <button class="btn tab-btn btn-primary tab" id="1">users <i class="bi bi-person-fill"></i></button>
       <button class="btn tab-btn btn-primary tab" id="2">search <i class="bi bi-search"></i></button>
       <button class="btn tab-btn btn-primary tab" id="3">new users <i class="bi bi-person-plus-fill"></i></button>
       <button class="btn tab-btn btn-primary tab" id="4">edit <i class="bi bi-pen-fill"></i></button>
+      <button class="btn tab-btn btn-danger tab deleteee" id="5">Delete Base</button>
     </div>
     <div class="desk active desk1" id="1">
       <h4 class="text-left m-3">Users</h4>
@@ -32,8 +40,8 @@
             <th scope="col">ID</th>
             <th scope="col">Action</th>
           </tr>
-          <tbody class="main-table-body">
-            <!-- <tr>
+        <tbody class="main-table-body">
+          <!-- <tr>
               <th scope="row">1</th>
               <td>Mark</td>
               <td>Otto</td>
@@ -43,7 +51,7 @@
                 <button class="btn btn-danger">Remove</button>
               </td>
             </tr> -->
-          </tbody>
+        </tbody>
       </table>
     </div>
     <div class="desk" id="2">
@@ -120,6 +128,7 @@
     </div>
   </div>
   <script type="module" src="/main.js"></script>
+  <script type="module" src="./scripts/removeBase.js"></script>
   <script type="module" src="./scripts/Search.js"></script>
   <script type="module" src="./scripts/handleNewUser.js"></script>
   <script type="module" src="./scripts/userObject.js"></script>
