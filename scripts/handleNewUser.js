@@ -70,6 +70,7 @@ const handleSubmit = (e) => {
 
 // remove button listener
 const removeItems = (ID) => {
+
     arr = arr.filter((item) => {
         return item.id != ID
     })
@@ -77,7 +78,8 @@ const removeItems = (ID) => {
     localStorage.setItem("data", JSON.stringify(arr))
 
     console.log(arr)
-    // location.reload()
+
+    location.reload()
 }
 
 addButton.addEventListener("click", (e) => {
