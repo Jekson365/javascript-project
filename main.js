@@ -30,3 +30,8 @@
 // if (!localStorage.getItem("data")) {
 //     localStorage.setItem("data", JSON.stringify(full))
 // }
+
+var x = "abcd1"
+var reg = /[0-9]/
+
+console.log(reg.test(x))

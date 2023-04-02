@@ -9,6 +9,7 @@ var forbidenVars = ['!','@','#','$','%','^','&','*','(',')']
 
 errorM.classList.add("d-none")
 
+
 const handleError = (errorMessage) => {
 
     errorM.classList.remove("d-none")

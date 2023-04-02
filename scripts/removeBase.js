@@ -13,4 +13,9 @@ yes.addEventListener("click",()=> {
 })
 no.addEventListener("click",()=> {
     deleteWindow.classList.remove("on")
+
+    var desks = document.querySelectorAll(".desk")
+
+    desks[0].classList.add("active")
+
 })

@@ -17,21 +17,16 @@ const getData = async () => {
         
         var removeButton = document.querySelectorAll(".removeee")
 
+
         for (var i = 0;i < removeButton.length;i++) {   
             removeButton[i].addEventListener("click",(e)=> {
                 removeItems(e.currentTarget.id)
             })
         }
-
-        // // remove 
-        // removeButton.forEach((btn) => {
-        //     btn.addEventListener("click", (e) => {
-        //         console.log(id)
-        //         // removeItems(id)
-        //     })
-        // })
     })
 }
+
+
 
 
 
