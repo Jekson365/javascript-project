@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vite": "^4.2.0"
+  },
+  "dependencies": {
+    "table2excel": "^1.0.4"
   }
 }

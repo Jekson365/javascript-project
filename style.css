@@ -161,3 +161,15 @@ body {
   margin: 10px;
   width: 100px !important;
 }
+.student-label {
+  margin-right: 10px;
+}
+#toexcel {
+  cursor: pointer;
+  /* font-size: 30px; */
+  transition: 0.3s;
+  
+}
+.das {
+  color: #1d6f42;
+}

@@ -18,7 +18,7 @@ class UserRow {
                     <td>${this.last}</td>
                     <td>
 
-                        <buttuon class="btn ${this.student ? "btn-success" : "btn-danger"}">${this.student}</button></td>
+                        <buttuon class="btn ${this.student ? "btn-success" : "btn-danger"}">${this.student ? "yes" : "no"}</button></td>
                     
                     <td>${this.id}</td>
                 <td>

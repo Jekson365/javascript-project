@@ -27,6 +27,9 @@
       <button class="btn tab-btn btn-primary tab" id="3">new users <i class="bi bi-person-plus-fill"></i></button>
       <button class="btn tab-btn btn-primary tab" id="4">edit <i class="bi bi-pen-fill"></i></button>
       <button class="btn tab-btn btn-danger tab deleteee" id="5">Delete Base</button>
+      <button class="btn btn-success das" id="toexcel">
+        <i class="bi bi-file-earmark-excel" id="toexcel"></i>
+      </button>
     </div>
     <div class="desk active desk1" id="1">
       <h4 class="text-left m-3">Users</h4>
@@ -58,10 +61,22 @@
       <!--Search bar-->
       <div class="search-bar d-flex justify-content-between align-items-center  ">
         <h4 class="text-l eft m-3">Search</h4>
-        <input type="text" id="user-search" placeholder="Search...">
+        <!-- <i class="bi bi-file-earmark-excel" id="toexcel"></i> -->
+        <!-- <button id="toexcel">export to Excel</button> -->
+        <div class="ffs">
+          <div class="d-flex align-items-center">
+            <div class="form-group student-label">
+              <label for="std" class="">Student</label>
+              <input type="checkbox" name="std" id="filter-student">
+            </div>
+            <div class="form-group">
+              <input type="text" id="user-search" placeholder="Search...">
+            </div>
+          </div>
+        </div>
       </div>
       <!--Search bar-->
-      <table class="table searched">
+      <table class="table searched" id="main-table">
         <thead>
           <tr>
             <th>First</th>
@@ -127,8 +142,10 @@
       </div>
     </div>
   </div>
-  
-  
+
+
+  <script type="text/javascript" src="./soure/table2excel.js"></script>
+  <script type="module" src="./scripts/export.js"></script>
   <script type="module" src="/main.js"></script>
   <script type="module" src="./scripts/removeBase.js"></script>
   <script type="module" src="./scripts/Search.js"></script>
