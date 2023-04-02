@@ -1,5 +1,6 @@
 
 class UserRow {
+
     constructor(first, last, student, id, count,data) {
         this.first = first
         this.last = last
@@ -10,6 +11,7 @@ class UserRow {
     }
 
     drawElement() {
+
         var mainTableBody = document.querySelector(".main-table-body")
 
         mainTableBody.innerHTML += `<tr class="tr-item">

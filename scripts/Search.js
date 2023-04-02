@@ -13,8 +13,10 @@ async function load() {
 load()
 
 var filterOnlyStudents = document.getElementById("filter-student")
+var filterOnlyNotStudents = document.getElementById("filter-not-student")
 
 filterOnlyStudents.addEventListener("click", () => {
+    filterOnlyNotStudents.checked = false
     if (filterOnlyStudents.checked) {
         var students = []
         data.map((each)=> {
@@ -28,6 +30,23 @@ filterOnlyStudents.addEventListener("click", () => {
         displayFilteredData(JSON.parse(localStorage.getItem("data")))
     }
 })
+
+filterOnlyNotStudents.addEventListener("click", () => {
+    filterOnlyStudents.checked = false
+    if (filterOnlyNotStudents.checked) {
+        var students = []
+        data.map((each)=> {
+            if (!each.student) {
+                students.push(each)
+            }
+        })
+        displayFilteredData(students)
+    }
+    else {
+        displayFilteredData(JSON.parse(localStorage.getItem("data")))
+    }
+})
+
 
 window.addEventListener("load", () => {
     displayFilteredData(data)
@@ -54,7 +73,7 @@ function displayFilteredData(arr) {
         `<tr>
             <th>${each.name}</th>
             <th>${each.surname}</th>
-            <th>${each.student}</th>
+            <th>${each.student ? "yes" : "no"}</th>
             <th>${each.id}</th>
         </tr>`
     ).join('')
