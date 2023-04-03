@@ -7,8 +7,8 @@
   }
 
   .mw-1200 {
-    max-width: 1200px;
-    height: 700px;
+    width: 90%;
+    height: 90vh;
     background-color: white;
     position: relative;
     box-shadow: 0 0 40px 0.1px rgba(0, 0, 0, 0.338);

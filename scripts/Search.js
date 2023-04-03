@@ -5,7 +5,6 @@ var searchedText = document.querySelector(".table-searched-body")
 var start = document.querySelector(".start")
 
 // filter on;y students
-
 var data = []
 async function load() {
     data = await JSON.parse(localStorage.getItem('data'))
@@ -19,7 +18,7 @@ filterOnlyStudents.addEventListener("click", () => {
     filterOnlyNotStudents.checked = false
     if (filterOnlyStudents.checked) {
         var students = []
-        data.map((each)=> {
+        data.map((each) => {
             if (each.student) {
                 students.push(each)
             }
@@ -35,7 +34,7 @@ filterOnlyNotStudents.addEventListener("click", () => {
     filterOnlyStudents.checked = false
     if (filterOnlyNotStudents.checked) {
         var students = []
-        data.map((each)=> {
+        data.map((each) => {
             if (!each.student) {
                 students.push(each)
             }
@@ -69,12 +68,13 @@ userInput.addEventListener("input", () => {
 
 // dispaly filteredDat Function
 function displayFilteredData(arr) {
+
     searchedText.innerHTML = arr.map((each) =>
         `<tr>
-            <th>${each.name}</th>
-            <th>${each.surname}</th>
-            <th>${each.student ? "yes" : "no"}</th>
-            <th>${each.id}</th>
+        <th>${each.name}</th>
+        <th>${each.surname}</th>
+        <th>${each.student ? "yes" : "no"}</th>
+        <th>${each.id}</th>
         </tr>`
     ).join('')
 }

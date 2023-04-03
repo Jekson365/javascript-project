@@ -9,6 +9,7 @@ deleteBtn2.addEventListener("click",()=> {
 yes.addEventListener("click",()=> {
     deleteWindow.classList.remove("on")
     localStorage.removeItem("data")
+    
     location.reload()
 })
 no.addEventListener("click",()=> {
