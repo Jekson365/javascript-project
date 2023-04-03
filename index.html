@@ -40,6 +40,7 @@
             <th scope="col">First</th>
             <th scope="col">Last</th>
             <th scope="col">Student</th>
+            <th scope="col">Age</th>
             <th scope="col">ID</th>
             <th scope="col">Action</th>
           </tr>
@@ -85,6 +86,7 @@
             <th>First</th>
             <th>Last</th>
             <th>Student</th>
+            <th>age</th>
             <th>ID</th>
           </tr>
         </thead>
@@ -118,7 +120,11 @@
             <label for="exampleInputPassword1">Surname</label>
             <input type="text" class="form-control surname" id="exampleInputPassword1" placeholder="surname">
           </div>
-          <div class="form-group">
+          <div class="form-group mt-4">
+            <label for="age">Age</label>
+            <input type="number" class="form-control age" id="age" placeholder="age">
+          </div>
+          <div class="form-group mt-4">
             <label for="student">student</label>
             <input type="checkbox" id="student" name="student">
           </div>
@@ -135,6 +141,7 @@
           <input type="text" class="form-control mt-3 idval" placeholder="id">
           <input type="text" class="form-control mt-3 nameval" placeholder="name">
           <input type="text" class="form-control mt-3 surnameval" placeholder="surname">
+          <input type="number" class="form-control mt-3 ageval" placeholder="age">
           <div class="form-group mt-3">
             <label for="student">student</label>
             <input type="checkbox" placeholder="student" id="ifstudent" name="student">

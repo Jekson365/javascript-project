@@ -1,5 +1,6 @@
 
 var nameValue = document.querySelector(".name")
+var ageValue = document.querySelector(".age")
 var surnameValue = document.querySelector(".surname")
 var addButton = document.querySelector(".sbuser")
 var errorM = document.querySelector(".error")
@@ -27,11 +28,15 @@ const handleSubmit = (e) => {
         name: "",
         student:null,
         surname: "",
+        age:0,
         id: Math.floor(Math.random() * 10000000)
     }
 
+    console.log(ageValue.value)
+
     result.name = nameValue.value
     result.surname = surnameValue.value
+    result.age = Number(ageValue.value)
     result.student = student.checked ? true : false
 
 

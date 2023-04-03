@@ -74,6 +74,7 @@ function displayFilteredData(arr) {
         <th>${each.name}</th>
         <th>${each.surname}</th>
         <th>${each.student ? "yes" : "no"}</th>
+        <th>${each.age}</th>
         <th>${each.id}</th>
         </tr>`
     ).join('')

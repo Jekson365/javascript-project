@@ -1,11 +1,11 @@
-var nameval,surnameval,idval,submitChange,ifStudent
+var nameval,surnameval,idval,submitChange,ifStudent,ageVal
 
 nameval = document.querySelector(".nameval")
 surnameval = document.querySelector(".surnameval")
 idval = document.querySelector(".idval")
 submitChange = document.querySelector(".submitChange")
 ifStudent = document.getElementById("ifstudent")
-
+ageVal = document.querySelector(".ageval")
 
 var pickedData
 var data = JSON.parse(localStorage.getItem("data"))
@@ -23,11 +23,14 @@ idval.addEventListener("input",(e)=> {
             console.log("no user found")
             nameval.value = ""
             surnameval.value = ''
+            ageVal.value = ''
+
         }
     })
     if (pickedData != undefined) {
         nameval.value = pickedData.name
         surnameval.value = pickedData.surname
+        ageVal.value = pickedData.age
     }
 })
 
@@ -37,6 +40,7 @@ submitChange.addEventListener("click",()=> {
     var changedName = nameval.value
     var changedSurname = surnameval.value
     var ID = idval.value
+    var changedAge = ageVal.value
     var changedStudent = ifStudent.checked ? true : false
 
     var editedData = data.map((item)=> {
@@ -44,6 +48,7 @@ submitChange.addEventListener("click",()=> {
             item.name = changedName
             item.surname = changedSurname
             item.id = Number(ID)
+            item.age = Number(changedAge)
             item.student = changedStudent
         }
         else {

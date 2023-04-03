@@ -9,9 +9,9 @@ const getData = async () => {
     var count = 0;
     
     data.map((each) => {
-        const { name, surname, student, id } = each
+        const { name, surname, student, id,age } = each
         count++
-        var eachUserObject = new UserRow(name, surname, student, id, count)
+        var eachUserObject = new UserRow(name, surname, student,age, id, count)
         
         eachUserObject.drawElement()
         
