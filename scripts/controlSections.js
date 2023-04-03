@@ -2,6 +2,7 @@ var tabButtons = document.querySelectorAll(".tab")
 var desks = document.querySelectorAll(".desk")
 
 
+
 tabButtons.forEach((item)=> {
     item.addEventListener("click",(e)=> {
         var id = e.currentTarget.getAttribute("id")
@@ -10,6 +11,7 @@ tabButtons.forEach((item)=> {
             desk.classList.remove("active")
             if (id == deskId) {
                 desk.classList.add("active")
+                localStorage.setItem("page",JSON.stringify(id))
             }
         })
 
